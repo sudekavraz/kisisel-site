@@ -5,6 +5,7 @@
   --bg-elevated: #252634;
   --border: #363a4f;
   --text: #c0caf5;
+  --text-secondary: #9aa2c7;
   --text-dim: #6b7089;
   --blue: #7aa2f7;
   --green: #9ece6a;
@@ -41,6 +42,11 @@ textarea:focus-visible {
 }
 
 ul { list-style: none; }
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
 
 .container {
   max-width: var(--max-width);
@@ -132,17 +138,32 @@ ul { list-style: none; }
 .nav-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
   margin-left: auto;
+  padding: 12px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav-toggle span {
   width: 22px;
   height: 2px;
   background: var(--text);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ============ HERO ============ */
@@ -194,7 +215,7 @@ ul { list-style: none; }
   .cursor { animation: none; }
 }
 
-.lead { color: var(--text-dim); margin-bottom: 16px; max-width: 62ch; }
+.lead { color: var(--text-secondary); margin-bottom: 16px; max-width: 62ch; }
 
 .hero .comment { margin-bottom: 24px; display: block; }
 
@@ -204,10 +225,11 @@ ul { list-style: none; }
   background: var(--bg-elevated);
   border: 1px solid var(--green);
   color: var(--green);
-  padding: 11px 20px;
+  padding: 13px 20px;
   border-radius: var(--radius);
   font-size: 0.9rem;
   cursor: pointer;
+  min-height: 44px;
 }
 .btn:hover { background: var(--green); color: var(--bg); }
 
@@ -258,7 +280,7 @@ main section {
 
 .timeline-alt { border-left-color: var(--green); }
 
-.timeline-item h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.timeline-item h3 { font-size: 1.15rem; margin-bottom: 6px; }
 
 .timeline-item .subtitle {
   color: var(--text-dim);
@@ -266,6 +288,8 @@ main section {
   font-size: 0.85rem;
   margin-bottom: 12px;
 }
+
+.timeline-item p { color: var(--text-secondary); }
 
 /* ============ PROJECT / FILE CARDS ============ */
 .project-grid,
@@ -294,10 +318,11 @@ main section {
   font-family: var(--font-mono);
   color: var(--text);
   font-weight: 600;
+  font-size: 1.02rem;
   margin-bottom: 10px;
 }
 
-.file-card p:not(.filename) { color: var(--text-dim); margin-bottom: 14px; }
+.file-card p:not(.filename) { color: var(--text-secondary); margin-bottom: 14px; }
 
 .tags {
   display: flex;
@@ -328,14 +353,14 @@ main section {
   padding: 3px 0;
 }
 
-.interests-col p { color: var(--text-dim); max-width: 60ch; }
+.interests-col p { color: var(--text-secondary); max-width: 60ch; }
 
 /* ============ PAGE HEADER (projeler / iletişim) ============ */
 .page-header {
   padding: 48px 24px 8px;
   border-top: none;
 }
-.page-header h1 { margin-bottom: 10px; font-size: 1.7rem; }
+.page-header h1 { margin-bottom: 10px; font-size: 1.9rem; }
 
 /* ============ İLETİŞİM ============ */
 .contact-section {
@@ -457,7 +482,11 @@ main section {
    ========================================================== */
 @media (max-width: 767px) {
 
+  .container { padding: 0 16px; }
+
   .nav-toggle { display: flex; }
+
+  .folder { overflow: hidden; text-overflow: ellipsis; }
 
   .nav-links {
     display: none;
@@ -468,6 +497,16 @@ main section {
     right: 0;
     background: var(--bg-panel);
     border-top: 1px solid var(--border);
+    animation: slideDown 0.18s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-links { animation: none; }
   }
 
   .nav-links.open { display: flex; }
@@ -476,7 +515,30 @@ main section {
     border-right: none;
     border-top: none;
     border-bottom: 1px solid var(--border);
+    padding: 14px 16px;
   }
 
   .tab.active { border-left: 2px solid var(--blue); border-top: none; }
+
+  /* Hero: küçük ekranlarda metinler taşmasın */
+  .hero { padding: 40px 16px; gap: 28px; }
+  .code-line { font-size: 1.05rem; flex-wrap: wrap; }
+  .hero-image img { width: 130px; height: 130px; }
+
+  main section { padding: 36px 16px; }
+  .page-header { padding: 36px 16px 8px; }
+
+  .comment-heading { font-size: 1.02rem; }
+
+  .code-block { font-size: 0.85rem; padding: 16px; }
+  .code-block ul { padding-left: 16px; }
+
+  .timeline-item { padding: 16px 18px; }
+
+  .file-card { padding: 16px; }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem; /* iOS otomatik zoom yapmasın diye 16px altına inmiyoruz */
+  }
 }
