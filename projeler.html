@@ -5,25 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sude Kavraz | Projeler</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="site-header">
-    <div class="container tabbar">
-      <div class="folder">
-        <span class="folder-icon" aria-hidden="true">📁</span>
-        <span>sude-kavraz</span>
-      </div>
-      <button class="nav-toggle" aria-label="Sekmeleri aç/kapat" aria-expanded="false">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Sude Kavraz</a>
+      <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="index.html" class="tab">index.html</a></li>
-          <li><a href="projeler.html" class="tab active"><span class="dot"></span>projeler.html</a></li>
-          <li><a href="iletisim.html" class="tab">iletisim.html</a></li>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="projeler.html" class="active">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
@@ -31,17 +28,14 @@
 
   <main>
     <section class="page-header container">
-      <p class="code-line small">
-        <span class="kw">import</span> <span class="var">{ projeler }</span> <span class="kw">from</span> <span class="str">"./calismalarim"</span><span class="op">;</span>
-      </p>
       <h1>Projelerim</h1>
       <p class="lead">Üniversite, staj ve kişisel çalışmalarımdan geliştirdiğim projeler.</p>
     </section>
 
     <section class="project-grid-full container">
 
-      <article class="file-card accent-blue">
-        <p class="filename">bayi-urun-katalogu/</p>
+      <article class="project-card">
+        <h3>Bayi Ürün Kataloğu</h3>
         <p>
           Bayi ve admin kullanıcıları için geliştirdiğim bir ürün katalog web
           uygulaması. Admin kullanıcıları sisteme yeni ürün ekleyebilirken
@@ -49,39 +43,39 @@
           kategorilere göre filtreleyebilir ve ürün detaylarını inceleyebilir.
         </p>
         <div class="tags">
-          <span>#aspnetcoremvc</span><span>#csharp</span><span>#razor</span>
-          <span>#bootstrap</span><span>#json</span><span>#cookieauth</span><span>#git</span>
+          <span>ASP.NET Core MVC</span><span>C#</span><span>Razor</span>
+          <span>Bootstrap</span><span>JSON</span><span>Cookie Authentication</span><span>Git</span>
         </div>
       </article>
 
-      <article class="file-card accent-green">
-        <p class="filename">portfoy-takip/</p>
+      <article class="project-card">
+        <h3>Portföy Takip Uygulaması</h3>
         <p>
           Kullanıcıların yatırım portföylerini takip edebildiği web uygulaması.
           Kullanıcı giriş sistemi, portföy yönetimi ve belirli aralıklarla
           güncellenen simüle edilmiş fiyat verileri üzerinde çalıştım.
         </p>
         <div class="tags">
-          <span>#java</span><span>#springboot</span><span>#mysql</span>
-          <span>#jwt</span><span>#restapi</span>
+          <span>Java</span><span>Spring Boot</span><span>MySQL</span>
+          <span>JWT</span><span>REST API</span>
         </div>
       </article>
 
-      <article class="file-card accent-gold">
-        <p class="filename">zoom-ai-chatbot/</p>
+      <article class="project-card">
+        <h3>Zoom AI Chatbot</h3>
         <p>
           Zoom ile entegre çalışan ve yapay zekâ API'si üzerinden kullanıcılara
           cevap verebilen chatbot uygulaması. OAuth ile kullanıcı yetkilendirme,
           webhook doğrulama ve AI API entegrasyonu gerçekleştirdim.
         </p>
         <div class="tags">
-          <span>#nodejs</span><span>#javascript</span><span>#oauth2</span>
-          <span>#restapi</span><span>#webhooks</span><span>#genai</span>
+          <span>Node.js</span><span>JavaScript</span><span>OAuth 2.0</span>
+          <span>REST API</span><span>Webhooks</span><span>GenAI</span>
         </div>
       </article>
 
-      <article class="file-card accent-blue">
-        <p class="filename">sat-solver/</p>
+      <article class="project-card">
+        <h3>SAT Solver</h3>
         <p>
           Mantıksal ifadelerin SAT veya UNSAT olup olmadığını belirleyen bir
           SAT Solver projesi. Projede CNF dönüşümü, CNF parser, inference
@@ -89,20 +83,20 @@
           üzerinde çalıştım.
         </p>
         <div class="tags">
-          <span>#algorithms</span><span>#sat</span><span>#cnf</span>
-          <span>#search</span><span>#logic</span>
+          <span>Algorithms</span><span>SAT</span><span>CNF</span>
+          <span>Search</span><span>Logic</span>
         </div>
       </article>
 
-      <article class="file-card accent-green">
-        <p class="filename">kisisel-site/</p>
+      <article class="project-card">
+        <h3>Kişisel Web Sitesi</h3>
         <p>
           Projelerimi, eğitimimi, deneyimlerimi ve kullandığım teknolojileri
           sergilemek amacıyla geliştirdiğim kişisel portföy sitesi — şu an
           görüntülemekte olduğunuz site.
         </p>
         <div class="tags">
-          <span>#html</span><span>#css</span><span>#javascript</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
         </div>
       </article>
 
@@ -110,12 +104,11 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p class="terminal-line">sude@portfolio:~$ echo "© 2026 Sude Kavraz"<span class="cursor">_</span></p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Sude Kavraz. Tüm hakları saklıdır.</p>
       <div class="social-links">
-        <a href="https://github.com/sudekavraz" target="_blank" rel="noopener">github</a>
-        <a href="#" target="_blank" rel="noopener">linkedin</a>
-        <a href="iletisim.html">iletişim</a>
+        <a href="https://github.com/sudekavraz" target="_blank" rel="noopener">GitHub</a>
+        <a href="iletisim.html">İletişim</a>
       </div>
     </div>
   </footer>

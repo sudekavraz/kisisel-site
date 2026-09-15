@@ -5,25 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sude Kavraz | Anasayfa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="site-header">
-    <div class="container tabbar">
-      <div class="folder">
-        <span class="folder-icon" aria-hidden="true">📁</span>
-        <span>sude-kavraz</span>
-      </div>
-      <button class="nav-toggle" aria-label="Sekmeleri aç/kapat" aria-expanded="false">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Sude Kavraz</a>
+      <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="index.html" class="tab active"><span class="dot"></span>index.html</a></li>
-          <li><a href="projeler.html" class="tab">projeler.html</a></li>
-          <li><a href="iletisim.html" class="tab">iletisim.html</a></li>
+          <li><a href="index.html" class="active">Anasayfa</a></li>
+          <li><a href="projeler.html">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
@@ -35,82 +32,57 @@
     <section class="hero container">
       <div class="hero-image">
         <img src="img/profil.jpg" alt="Sude Kavraz'ın profil fotoğrafı">
-        
       </div>
       <div class="hero-text">
-        <h1 class="code-line"></h1>
-          <span class="kw">const</span> <span class="var">developer</span>
-          <span class="op">=</span> <span class="str">"Sude Kavraz"</span><span class="op">;</span><span class="cursor">_</span>
-        </p>
+        <h1>Merhaba, ben Sude 👋</h1>
         <p class="lead">
           İstanbul Teknik Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.
           Yazılım geliştirme, web teknolojileri ve yapay zekâ alanlarına ilgi duyuyorum.
           Üniversite projelerimin ve staj deneyimlerimin yanında kendi projelerimi
           geliştirerek yeni teknolojiler öğrenmeye ve kendimi geliştirmeye devam ediyorum.
         </p>
-        <p class="comment">// öğreniyorum, geliştiriyorum, üretiyorum.</p>
-        <a href="projeler.html" class="btn">projelerimi-gor</a>
+        <p class="motto">"Öğreniyorum, geliştiriyorum, üretiyorum."</p>
+        <a href="projeler.html" class="btn">Projelerimi Gör</a>
       </div>
     </section>
 
     <!-- YETENEKLER -->
     <section class="skills container">
-      <h2 class="comment-heading">// yetenekler &amp; kullandığım teknolojiler</h2>
+      <h2>Yetenekler &amp; Kullandığım Teknolojiler</h2>
       <div class="skills-grid">
 
-        <div class="code-block">
-          <p class="block-title"><span class="var">diller</span> <span class="op">=</span> <span class="brace">[</span></p>
-          <ul>
-            <li><span class="str">"C"</span>,</li>
-            <li><span class="str">"C#"</span>,</li>
-            <li><span class="str">"Java"</span>,</li>
-            <li><span class="str">"JavaScript"</span>,</li>
-            <li><span class="str">"Python"</span>,</li>
-            <li><span class="str">"HTML"</span>,</li>
-            <li><span class="str">"CSS"</span></li>
-          </ul>
-          <p class="brace">]</p>
+        <div class="skill-group">
+          <h3>Programlama Dilleri</h3>
+          <div class="pill-list">
+            <span>C</span><span>C#</span><span>Java</span><span>JavaScript</span>
+            <span>Python</span><span>HTML</span><span>CSS</span>
+          </div>
         </div>
 
-        <div class="code-block">
-          <p class="block-title"><span class="var">webTeknolojileri</span> <span class="op">=</span> <span class="brace">[</span></p>
-          <ul>
-            <li><span class="str">"ASP.NET Core MVC"</span>,</li>
-            <li><span class="str">"Spring Boot"</span>,</li>
-            <li><span class="str">"Node.js"</span>,</li>
-            <li><span class="str">"Razor Views"</span>,</li>
-            <li><span class="str">"Bootstrap"</span>,</li>
-            <li><span class="str">"REST API"</span>,</li>
-            <li><span class="str">"JWT Authentication"</span>,</li>
-            <li><span class="str">"Cookie Authentication"</span></li>
-          </ul>
-          <p class="brace">]</p>
+        <div class="skill-group">
+          <h3>Web Teknolojileri</h3>
+          <div class="pill-list">
+            <span>ASP.NET Core MVC</span><span>Spring Boot</span><span>Node.js</span>
+            <span>Razor Views</span><span>Bootstrap</span><span>REST API</span>
+            <span>JWT Authentication</span><span>Cookie Authentication</span>
+          </div>
         </div>
 
-        <div class="code-block">
-          <p class="block-title"><span class="var">veritabaniVeAraclar</span> <span class="op">=</span> <span class="brace">[</span></p>
-          <ul>
-            <li><span class="str">"MySQL"</span>,</li>
-            <li><span class="str">"JSON"</span>,</li>
-            <li><span class="str">"Git"</span>,</li>
-            <li><span class="str">"GitHub"</span>,</li>
-            <li><span class="str">"VS Code"</span>,</li>
-            <li><span class="str">"IntelliJ IDEA"</span>,</li>
-            <li><span class="str">"Postman"</span></li>
-          </ul>
-          <p class="brace">]</p>
+        <div class="skill-group">
+          <h3>Veritabanı &amp; Araçlar</h3>
+          <div class="pill-list">
+            <span>MySQL</span><span>JSON</span><span>Git</span><span>GitHub</span>
+            <span>VS Code</span><span>IntelliJ IDEA</span><span>Postman</span>
+          </div>
         </div>
 
-        <div class="code-block">
-          <p class="block-title"><span class="var">digerAlanlar</span> <span class="op">=</span> <span class="brace">[</span></p>
-          <ul>
-            <li><span class="str">"Veri Yapıları ve Algoritmalar"</span>,</li>
-            <li><span class="str">"Nesne Yönelimli Programlama"</span>,</li>
-            <li><span class="str">"Mikrodenetleyiciler"</span>,</li>
-            <li><span class="str">"Yapay Zekâ / GenAI"</span>,</li>
-            <li><span class="str">"REST API Geliştirme"</span></li>
-          </ul>
-          <p class="brace">]</p>
+        <div class="skill-group">
+          <h3>Diğer Alanlar</h3>
+          <div class="pill-list">
+            <span>Veri Yapıları ve Algoritmalar</span><span>Nesne Yönelimli Programlama</span>
+            <span>Mikrodenetleyiciler</span><span>Yapay Zekâ / GenAI</span>
+            <span>REST API Geliştirme</span>
+          </div>
         </div>
 
       </div>
@@ -118,7 +90,7 @@
 
     <!-- EĞİTİM -->
     <section class="timeline-section container">
-      <h2 class="comment-heading">// eğitim</h2>
+      <h2>Eğitim</h2>
       <div class="timeline-item">
         <h3>İstanbul Teknik Üniversitesi</h3>
         <p class="subtitle">Bilgisayar Mühendisliği — %100 İngilizce</p>
@@ -133,8 +105,8 @@
 
     <!-- DENEYİM -->
     <section class="timeline-section container">
-      <h2 class="comment-heading">// deneyim</h2>
-      <div class="timeline-item timeline-alt">
+      <h2>Deneyim</h2>
+      <div class="timeline-item">
         <h3>Softtech — GenAI Team</h3>
         <p class="subtitle">Software Development Intern</p>
         <p>
@@ -150,41 +122,41 @@
 
     <!-- ÖNE ÇIKAN PROJELER -->
     <section class="featured-projects container">
-      <h2 class="comment-heading">// öne çıkan projeler</h2>
+      <h2>Öne Çıkan Projeler</h2>
       <div class="project-grid">
 
-        <article class="file-card accent-blue">
-          <p class="filename">bayi-urun-katalogu/</p>
+        <article class="project-card">
+          <h3>Bayi Ürün Kataloğu</h3>
           <p>Bayi ve admin kullanıcıları için geliştirilen bir ürün katalog web uygulaması.</p>
           <div class="tags">
-            <span>#aspnet</span><span>#csharp</span><span>#razor</span><span>#bootstrap</span>
+            <span>ASP.NET Core MVC</span><span>C#</span><span>Razor</span><span>Bootstrap</span>
           </div>
         </article>
 
-        <article class="file-card accent-green">
-          <p class="filename">portfoy-takip/</p>
+        <article class="project-card">
+          <h3>Portföy Takip Uygulaması</h3>
           <p>Kullanıcıların yatırım portföylerini takip edebildiği web uygulaması.</p>
           <div class="tags">
-            <span>#java</span><span>#springboot</span><span>#mysql</span><span>#jwt</span>
+            <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>JWT</span>
           </div>
         </article>
 
-        <article class="file-card accent-gold">
-          <p class="filename">zoom-ai-chatbot/</p>
+        <article class="project-card">
+          <h3>Zoom AI Chatbot</h3>
           <p>Zoom ile entegre çalışan, yapay zekâ API'si üzerinden yanıt veren chatbot.</p>
           <div class="tags">
-            <span>#nodejs</span><span>#oauth2</span><span>#genai</span>
+            <span>Node.js</span><span>OAuth 2.0</span><span>GenAI</span>
           </div>
         </article>
 
       </div>
-    <a href="projeler.html" class="btn btn-outline">tum-projeler</a>
+      <a href="projeler.html" class="btn btn-outline">Tüm Projeleri Gör</a>
     </section>
 
     <!-- İLGİ ALANLARI & ŞU AN -->
     <section class="interests container">
       <div class="interests-col">
-        <h2 class="comment-heading">// ilgi alanlarım</h2>
+        <h2>İlgi Alanlarım</h2>
         <ul>
           <li>Web geliştirme</li>
           <li>Yapay zekâ ve GenAI</li>
@@ -194,7 +166,7 @@
         </ul>
       </div>
       <div class="interests-col">
-        <h2 class="comment-heading">// şu an ne öğreniyorum</h2>
+        <h2>Şu An Ne Öğreniyorum?</h2>
         <p>
           Modern web geliştirme teknolojileri üzerinde çalışıyor ve gerçek
           projeler geliştirerek yazılım becerilerimi geliştirmeye devam
@@ -206,12 +178,11 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p class="terminal-line">sude@portfolio:~$ echo "© 2026 Sude Kavraz"<span class="cursor">_</span></p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Sude Kavraz. Tüm hakları saklıdır.</p>
       <div class="social-links">
-        <a href="https://github.com/sudekavraz" target="_blank" rel="noopener">github</a>
-        <a href="#" target="_blank" rel="noopener">linkedin</a>
-        <a href="iletisim.html">iletişim</a>
+        <a href="https://github.com/sudekavraz" target="_blank" rel="noopener">GitHub</a>
+        <a href="iletisim.html">İletişim</a>
       </div>
     </div>
   </footer>

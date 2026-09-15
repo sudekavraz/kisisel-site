@@ -5,25 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sude Kavraz | İletişim</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="site-header">
-    <div class="container tabbar">
-      <div class="folder">
-        <span class="folder-icon" aria-hidden="true">📁</span>
-        <span>sude-kavraz</span>
-      </div>
-      <button class="nav-toggle" aria-label="Sekmeleri aç/kapat" aria-expanded="false">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Sude Kavraz</a>
+      <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="index.html" class="tab">index.html</a></li>
-          <li><a href="projeler.html" class="tab">projeler.html</a></li>
-          <li><a href="iletisim.html" class="tab active"><span class="dot"></span>iletisim.html</a></li>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="projeler.html">Projeler</a></li>
+          <li><a href="iletisim.html" class="active">İletişim</a></li>
         </ul>
       </nav>
     </div>
@@ -31,53 +28,46 @@
 
   <main>
     <section class="page-header container">
-      <p class="code-line small">
-        <span class="kw">function</span> <span class="var">iletisimeGec</span><span class="op">()</span> <span class="brace">{</span>
-      </p>
       <h1>Benimle İletişime Geç</h1>
       <p class="lead">Projelerimi incelemek veya benimle iletişime geçmek için aşağıdaki bağlantıları ya da formu kullanabilirsin.</p>
     </section>
 
     <section class="contact-section container">
 
-      <div class="contact-links code-block">
-        <p class="block-title"><span class="var">contact</span> <span class="op">=</span> <span class="brace">{</span></p>
-        <ul class="contact-list">
-          <li>
-            <span class="key">github</span><span class="op">:</span>
-            <a href="https://github.com/sudekavraz" target="_blank" rel="noopener" class="str">"@sudekavraz"</a><span class="op">,</span>
-          </li>
-          <li>
-            <span class="key">email</span><span class="op">:</span>
-            <a href="mailto:sudekavraz2002@gmail.com" class="str">"sudekavraz2002@gmail.com"</a>
-          </li>
-        </ul>
-        <p class="brace">}</p>
+      <div class="contact-links">
+        <a href="https://github.com/sudekavraz" target="_blank" rel="noopener" class="contact-item">
+          <strong>GitHub</strong>
+          <span>@sudekavraz</span>
+        </a>
+        <a href="mailto:sudekavraz2002@gmail.com" class="contact-item">
+          <strong>E-posta</strong>
+          <span>sudekavraz2002@gmail.com</span>
+        </a>
       </div>
 
       <!-- Formspree.io form -->
       <form class="contact-form" action="https://formspree.io/f/mljeyvvj" method="POST">
-        <label for="name"><span class="op">&gt;</span> ad soyad</label>
+        <label for="name">Ad Soyad</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="email"><span class="op">&gt;</span> e-posta</label>
+        <label for="email">E-posta</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="message"><span class="op">&gt;</span> mesajınız</label>
+        <label for="message">Mesajınız</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
-        <button type="submit" class="btn">mesaj-gonder</button>
+        <button type="submit" class="btn">Gönder</button>
       </form>
 
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p class="terminal-line">sude@portfolio:~$ echo "© 2026 Sude Kavraz"<span class="cursor">_</span></p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Sude Kavraz. Tüm hakları saklıdır.</p>
       <div class="social-links">
-        <a href="https://github.com/sudekavraz" target="_blank" rel="noopener">github</a>
-        <a href="iletisim.html">iletişim</a>
+        <a href="https://github.com/sudekavraz" target="_blank" rel="noopener">GitHub</a>
+        <a href="iletisim.html">İletişim</a>
       </div>
     </div>
   </footer>
