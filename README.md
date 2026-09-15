@@ -1,53 +1,15 @@
-# Kişisel Web Sitesi
-
-Sude Kavraz'ın projelerini, eğitimini, deneyimlerini ve kullandığı teknolojileri
-sergilemek amacıyla geliştirilen kişisel portföy sitesi.
-
-## Canlı Site
-
-https://sudekavraz.github.io/kisisel-site/
-
-## Kullanılan Teknolojiler
-
-- HTML5
-- CSS3 (Grid, Flexbox, medya sorguları ile responsive tasarım)
-- Vanilla JavaScript (mobil menü etkileşimi)
-- Formspree.io (iletişim formu için backend'siz form gönderimi)
-
-## Sayfalar
-
-- **index.html** — Anasayfa: tanıtım, yetenekler, eğitim, deneyim, öne çıkan projeler
-- **projeler.html** — Tüm projelerin detaylı listesi
-- **iletisim.html** — İletişim bilgileri ve mesaj formu
-
-## Tasarım Yaklaşımı
-
-Site, bir kod editörü (VS Code benzeri) temasından ilham alınarak tasarlandı.
-Navbar dosya sekmeleri gibi, bölüm başlıkları kod yorumu (`//`) gibi, yetenekler
-ise bir JavaScript dizisi/obje söz dizimiyle gösteriliyor.
-
-## Responsive Tasarım
-
-Site 360px, 768px ve 1280px genişliklerde test edilmiş ve bu kırılım
-noktalarına göre düzenlenmiştir.
-
-## Projeyi Yaparken
-
 **Zorlandığım noktalar:**
-[Buraya kendi cümlelerinle yaz — örn. "Responsive tasarımı farklı ekran
-genişliklerinde test etmek", "Formspree entegrasyonu" vb.]
+Tasarım ve CSS kararlarını vermek en çok zorlandığım kısım oldu — hangi renk
+paletinin, tipografinin ve düzenin siteye en çok yakışacağına karar vermek
+zaman aldı, birkaç farklı tasarım denemesinden geçtim.
 
 **Kolay gelen noktalar:**
-[Buraya kendi cümlelerinle yaz]
+Git commit ve push süreci beklediğimden daha kolay geldi, komutları
+öğrendikten sonra değişiklikleri kaydedip GitHub'a göndermek rahat bir
+akışa dönüştü.
 
-**Eklediğim ekstra özellikler:**
-[Buraya kendi cümlelerinle yaz — örn. mobil menü animasyonu, erişilebilirlik
-iyileştirmeleri vb.]
-
-## Kurulum
-
-Depoyu klonla ve `index.html` dosyasını tarayıcıda aç:
-
-\`\`\`
-git clone https://github.com/sudekavraz/kisisel-site.git
-\`\`\`
+**Eklediğim extra özellikler:**
+Mobil menüde hamburger ikonunun X şekline dönüşmesi ve açılırken yumuşak bir
+geçiş animasyonu, form ve buton gibi dokunmatik elemanların mobilde yeterince
+büyük olmasına dikkat edilmesi, ve `prefers-reduced-motion` desteğiyle hareket
+azaltma tercihi olan kullanıcılar için animasyonların kapatılması.
